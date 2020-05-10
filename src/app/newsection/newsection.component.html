@@ -1,0 +1,17 @@
+<div *ngIf="showLoader">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <div class="form-group">
+    <label>Section Name</label>
+    <input type="text" class="form-control" formControlName="sectionName" id="sectionNameId" /><br>
+  </div>
+
+  <div class="form-group">
+    <label>Required Count</label>
+    <input type="text" class="form-control" formControlName="count" id="countId" /><br>
+  </div>
+
+  <button type="submit">{{btnName}}</button>
+</form>
